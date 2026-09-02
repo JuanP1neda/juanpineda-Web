@@ -1,0 +1,88 @@
+:root{
+    
+    --titulo: #1E3A8A;
+    --subtítulos: #334155;
+    --bordes: #1E3A8A;
+    --sombra: #1e3b8aa6;
+    --lineas:#1e3b8aa9;
+    --header_footer: #334155;
+    --enlaces: #0284C7;
+    --texto: #0F172A;
+    --textoSecundario: #64748B;
+    --fondoContenedor: #F9F8F6;
+    --WhatsApp: #25D366;
+}
+body{
+    background-image: url('/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: Sans-Serif;
+    margin: 100px 200px;
+    padding: 0;
+    margin: 50px 150px;
+}
+
+h1{
+    color: var(--titulo);
+    text-align: center;
+}
+h3,h4{
+    color: var(--subtítulos);
+    margin-bottom: 0px;
+}
+p,ul,ol{
+    color: var(--texto);
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: var(--enlaces);
+}
+button{
+        background-color: var(--fondoContenedor);
+        border: 2px solid var(--bordes);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.5s ease-in-out;
+        font-size: 15px;
+        margin: 10px;
+        padding: 3px;
+    }
+button:hover{
+        box-shadow: 0px 0px 20px 2px var(--bordes);
+}
+.cerrarBoton{
+        background-color: var(--fondoContenedor);
+        border: 2px solid red;
+        border-radius: 50px;
+        width: 25px; height: 25px;
+        display: flex;
+        align-items: center; justify-content: center;
+        
+        cursor: pointer;
+        transition: box-shadow 0.5s ease-in-out;
+        font-size: 15px;
+        margin: 10px;
+        padding: 3px;
+    }
+.cerrarBoton:hover{
+        box-shadow: 0px 0px 20px 2px red;
+}
+
+/* Inicio Multiplataforma */
+    /* Tablets */
+    @media (width <= 750px) {
+        body{
+            margin: 20px;
+            padding: 0px;
+        }
+        section, article{
+            flex-wrap: wrap;
+        }
+    }
+
+
+/* Fin Multiplataforma */

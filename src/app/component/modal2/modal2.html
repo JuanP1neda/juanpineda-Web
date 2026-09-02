@@ -1,0 +1,102 @@
+<dialog #dialogo2 class="modal-dialog">
+
+    <div class="modal-header">
+        <h3>Cotizar servicio de soporte técnico</h3>
+        <button class="cerrarBoton" type="button" (click)="cerrarModal()"><b>X</b></button>
+    </div><br>
+
+    <div class="modal-main">
+
+        <form [formGroup]="Cotizar" (ngSubmit)="logica2()">
+            <div>
+                <label><b>Tu Nombre o Nombre de tu Negocio</b></label><br>
+                <input formControlName="nombre" type="text" placeholder="Juan Pérez / MisceláneaJGA"><br>
+                
+                @if (Cotizar.get('nombre')?.invalid && Cotizar.get('nombre')?.touched) {
+                    <small style="color: red;">Debe colocar un nombre para continuar</small>
+                }
+
+            </div><br>
+
+            <div>
+                <label><b>¿Que sistema operativo tiene el equipo?</b></label><br>
+                <select formControlName="sistemaOperativo" name="sistemaOperativo" >
+                    <option value="" defaultSelected >
+                        Seleccionar
+                    </option>
+                    <option value="Windows 11">
+                        Windows 11
+                    </option>
+                    <option value="Windows 10">
+                        Windows 10
+                    </option>
+                    <option value="Windows 8 / 8.1">
+                        Windows 8 / 8.1
+                    </option>
+                    <option value="Windows 7">
+                        Windows 7
+                    </option>
+                    <option value="Ubuntu / Linux Mint">
+                        Ubuntu / Linux Mint
+                    </option>
+                    <option value="No sé / El equipo no enciende o no pasa del logo">
+                        No sé
+                    </option>
+                </select>
+            </div><br>
+            
+            <div>
+                <label><b>¿Que problema o servicio necesita?</b></label><br>
+                <select formControlName="problema" name="problema">
+                    <option value="" defaultSelected>
+                        Seleccionar
+                    </option>
+                    <option value="Mantenimiento Lógico y Optimización">
+                        Mantenimiento Lógico y Optimización
+                    </option>
+                    <option value="Eliminación de virus/malware">
+                        Eliminación de virus/malware
+                    </option>
+                    <option value="Formateo e instalación limpia (Windows 10/11)">
+                        Formateo e instalación limpia (Windows 10/11)
+                    </option>
+                    <option value="Instalación / Migración a Linux">
+                        Instalación / Migración a Linux
+                    </option>
+                    <option value="Recuperación de Sistema / Error de Arranque">
+                        Recuperación de Sistema / Error de Arranque
+                    </option>
+                    <option value="Instalación de Programas Especializados">
+                        Instalación de Programas Especializados
+                    </option>
+                    <option value="Respaldo y Migración de Datos (Copia de Seguridad)">Respaldo y Migración de Datos (Copia de Seguridad)</option>
+                </select><br>
+            </div>
+
+            <a routerLink="/informacion" fragment="soporteTecnico">¿Precios y Servicios?</a><br><br>
+
+            <div>
+                <label><b>Describe brevemente que necesita tu equipo</b></label><br>
+                <textarea formControlName="descripcion" style="width: 250px; height: 80px;" placeholder="La computadora prende pero se queda en la pantalla de carga y está muy lento para abrir programas."></textarea><br>
+
+                @if (Cotizar.get('descripcion')?.invalid && Cotizar.get('descripcion')?.touched) {
+                    <small style="color: red;">Debe colocar una descripción para poder continuar</small>
+                }
+
+            </div><br>
+
+            <button type="button" (click)="limpiar2()">
+                limpiar
+            </button>
+
+            <button type="submit" [disabled]="Cotizar.invalid">
+                Solicitar
+            </button>
+            
+        </form>
+
+    </div>
+
+    <p style="color: red;">📌 <b>NOTA:</b> Servicios enfocados en software, sistema operativo y rendimiento lógico (no realizamos reparación física de hardware ni soldadura).</p>
+
+</dialog>

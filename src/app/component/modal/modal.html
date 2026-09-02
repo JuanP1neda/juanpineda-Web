@@ -1,0 +1,59 @@
+<dialog #dialogo class="modal-dialog">
+
+  <div class="modal-header">
+    <h3>Cotizar Pagina Web</h3>
+    <button class="cerrarBoton" type="button" (click)="cerrarModal()"><b>X</b></button>
+  </div><br>
+
+    <div class="modal-main">
+      
+    <form [formGroup]="cotizarWeb" (ngSubmit)="logica()">
+        
+      <div>
+        <label><b>Tu Nombre o Nombre de tu Negocio</b></label><br><br>
+        <input type="text" formControlName="nombre" placeholder="Juan Pérez / MisceláneaJGA"><br>
+
+        @if (cotizarWeb.get('nombre')?.invalid && cotizarWeb.get('nombre')?.touched) {
+          <small style="color: red;">Debe incluir su nombre o el nombre de su negocio para continuar.</small>
+        }
+        </div><br>
+
+        <div>
+          <label><b>¿Que tipo de página necesitas?</b></label><br><br>
+            <select formControlName="tipoPagina" name="tipoPagina">
+              <option value="" default Selected>Selecciona</option>
+              <option value="Pagina Unica de Ventas">Pagina Unica de Ventas</option>
+              <option value="Catálogos de Productos/Servicios">Catálogo de Productos/Servicios</option>
+              <option value="Portafolio Profesional">Portafolio Profesional</option>
+              <option value="No estoy seguro, quiero asesoría">No estoy seguro, quiero asesoría</option>
+            </select>
+        </div>
+        <a routerLink="/informacion" fragment="paginaWeb">¿Que significa cada opción?</a><br><br>
+
+        <div>
+          <label><b>¿Ya tienes logo, fotos e información de tu negocio?</b></label><br><br>
+          <label><input value="Si, tengo todo listo." type="radio" name="tieneLogo" formControlName="tieneLogo">Si, tengo todo listo.</label><br>
+
+          <label><input value="Tengo algunas cosas." type="radio" name="tieneLogo" formControlName="tieneLogo">Tengo algunas cosas.</label><br>
+          
+          <label><input value="No, necesito ayuda con eso" type="radio" name="tieneLogo" formControlName="tieneLogo">No, necesito ayuda con eso.</label><br>
+        </div><br>
+        
+        <div>
+          <label><b>Cuéntame brevemente sobre tu proyecto</b></label><br><br>
+          <textarea formControlName="brevementeProyecto"></textarea><br>
+
+          @if (cotizarWeb.get('brevementeProyecto')?.invalid && cotizarWeb.get('brevementeProyecto')?.touched) {
+            <small style="color: red;">Debe describir el proyecto que desea para poder continuar</small>
+          }
+        </div><br>
+
+        <button type="button" (click)="limpiar()">Limpiar</button>
+        <button type="submit" [disabled]="cotizarWeb.invalid">Aceptar</button>
+        
+      </form>
+
+      </div>
+
+
+</dialog>

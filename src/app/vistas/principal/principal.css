@@ -1,0 +1,149 @@
+
+nav{
+    background-color: var(--lineas);
+    height: 3px;
+}
+/* Inicio Menu */
+    .section_menu{
+        display: flex;
+        margin-bottom: 70px;
+        margin-top: 70px;
+    }
+    .article_menu{
+        display: flex;
+        background-color: var(--fondoContenedor);
+        padding: 10px 20px;
+        margin: 0px 50px;
+        border: var(--bordes) solid 2px;
+        border-radius: 30px;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+/* Fin menu */
+
+/* Inicio Como Trabajamos */
+    
+    .como_trabajamos{
+        margin-bottom: 70px;
+    }
+    .article_comoTrabajamos{
+        display: flex;
+    }
+    .parrafos_comoTrabajamos{
+        background-color: var(--fondoContenedor);
+        border: solid var(--bordes) 2px;
+        border-radius: 25px;
+        margin: 20px;
+        padding: 20px;
+        width: 50%;
+    }
+
+/* Fin Como Trabajamos */
+
+/* Inicio mi información */
+    .mi_informacion{
+        display: flex;
+        margin-bottom: 70px;
+    }
+    .contenedor_foto{
+        margin: 0px 10px;
+    }
+    .Foto{
+        width: 200px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 20px 2px var(--bordes);
+        border: var(--bordes) 2px solid;
+    }
+/* Fin mi información */
+
+/* Inicio demostrar capacidad */
+    .demostracion_capacidad{
+        margin-bottom: 70px;
+    }
+
+/* Fin demostrar capacidad */
+
+/* Inicio footer */
+    footer{
+        margin: 40px 0px 0px 0px ;
+    }
+    .footer_texto{
+        text-align: center;
+    }
+    .footer_redes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .redes{
+        width: 40px;
+        margin: 0px 20px;
+    }
+    .referencias{
+        text-align: center;
+        color: var(--texto);
+        margin: 20px;
+        font-size: 11px;
+        opacity: 0.6;
+    }
+/* Fin footer */
+
+
+ @media (width <= 750px){
+    
+    /* INICIO TABLET-CELULAR */
+        /*Inicio Menu*/
+            .section_menu{
+                margin-bottom: 20px;
+                margin-top: 50px;
+            }
+            .article_menu{
+                padding: 10px 10px;
+                margin: 20px;
+                width: 100%;
+            }
+        /*Fin Menu*/
+
+        /* Inicio Como Trabajamos */
+        
+            .como_trabajamos{
+                margin-bottom: 40px;
+            }
+            .article_comoTrabajamos{
+                display: flex;
+                justify-content: center;
+            }
+            .parrafos_comoTrabajamos{
+                background-color: var(--fondoContenedor);
+                border: solid var(--bordes) 2px;
+                border-radius: 25px;
+                padding: 30px;
+                width: 100%;
+            }
+        /* Fin Como Trabajamos*/
+
+        /* Inicio mi información*/
+            .mi_informacion{
+                margin: 50px 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .contenedor_foto{
+                margin: 15px;
+            }
+            .Foto{
+                width: 150px;
+            }
+        /* Fin mi información*/
+
+        /* Inicio demostrar capacidad*/
+            .demostracion_capacidad{
+                margin: 50px 20px;
+            }
+        /* Fin demostrar capacidad*/
+            
+    /* FIN TABLET-CELULAR */
+
+}

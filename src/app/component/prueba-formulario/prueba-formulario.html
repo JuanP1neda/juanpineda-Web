@@ -1,0 +1,37 @@
+<form [formGroup]="simuladorInversiones" (ngSubmit)="logica()">
+    <div>
+        <label><b>Monto a Invertir ($COL)</b></label><br>
+        <input type="number" formControlName="inversion"><br>
+        @if (simuladorInversiones.get('inversion')?.invalid && simuladorInversiones.get('inversion')?.touched) {
+            <small style="color: red;">
+                ¡Error! debe ingresar un valor superior a $50.000
+            </small>
+        }
+    </div><br>
+    <div>
+        <label><b>Plazo de Inversión (Meses)</b></label><br>
+        <input type="number" formControlName="plazo"><br>
+        @if (simuladorInversiones.get('plazo')?.invalid && simuladorInversiones.get('plazo')?.touched) {
+            <small style="color: red;">
+                ¡Error! debe ingresar mínimo 3 meses y máximo 24 meses
+            </small>
+        }
+    </div><br>
+    <div>
+        <label><b>Nivel de Riesgo</b></label><br>
+
+        <label><input type="radio" name="nivelRiesgo" value="Bajo" formControlName="nivelRiesgo">Riesgo Bajo</label><br>
+
+        <label><input type="radio" name="nivelRiesgo" value="Alto" formControlName="nivelRiesgo">Riesgo Alto</label><br>
+    </div>
+    <button type="submit" [disabled]="simuladorInversiones.invalid">Consultar</button>
+</form>
+
+@if (mensaje1 && mensaje2 && mensaje3 && mensaje4) {
+    <p>
+        {{mensaje1}} <br>
+        {{mensaje2}} <br>
+        {{mensaje3}} <br>
+        {{mensaje4}}
+    </p>
+}
