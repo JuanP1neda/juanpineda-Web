@@ -1,7 +1,7 @@
 <dialog #dialogo2 class="modal-dialog">
 
     <div class="modal-header">
-        <h3>Cotizar servicio de soporte técnico</h3>
+        <h3 style="font-size: 18px;">Cotizar servicio de soporte técnico</h3>
         <button class="cerrarBoton" type="button" (click)="cerrarModal()"><b>X</b></button>
     </div><br>
 
@@ -10,7 +10,7 @@
         <form [formGroup]="Cotizar" (ngSubmit)="logica2()">
             <div>
                 <label><b>Tu Nombre o Nombre de tu Negocio</b></label><br>
-                <input formControlName="nombre" type="text" placeholder="Juan Pérez / MisceláneaJGA"><br>
+                <input formControlName="nombre" type="text" placeholder="Juan Pérez/Tu Negocio"><br>
                 
                 @if (Cotizar.get('nombre')?.invalid && Cotizar.get('nombre')?.touched) {
                     <small style="color: red;">Debe colocar un nombre para continuar</small>
@@ -47,12 +47,12 @@
             
             <div>
                 <label><b>¿Que problema o servicio necesita?</b></label><br>
-                <select formControlName="problema" name="problema">
+                <select class="selectProblema" formControlName="problema" name="problema">
                     <option value="" defaultSelected>
                         Seleccionar
                     </option>
                     <option value="Mantenimiento Lógico y Optimización">
-                        Mantenimiento Lógico y Optimización
+                        Mantenimiento y Optimización
                     </option>
                     <option value="Eliminación de virus/malware">
                         Eliminación de virus/malware
@@ -61,15 +61,15 @@
                         Formateo e instalación limpia (Windows 10/11)
                     </option>
                     <option value="Instalación / Migración a Linux">
-                        Instalación / Migración a Linux
+                        Instalación/Migración a Linux
                     </option>
                     <option value="Recuperación de Sistema / Error de Arranque">
-                        Recuperación de Sistema / Error de Arranque
+                        Recuperación de Sistema/Error de Arranque
                     </option>
                     <option value="Instalación de Programas Especializados">
                         Instalación de Programas Especializados
                     </option>
-                    <option value="Respaldo y Migración de Datos (Copia de Seguridad)">Respaldo y Migración de Datos (Copia de Seguridad)</option>
+                    <option value="Respaldo y Migración de Datos (Copia de Seguridad)">Respaldo y Migración de Datos</option>
                 </select><br>
             </div>
 
@@ -77,7 +77,7 @@
 
             <div>
                 <label><b>Describe brevemente que necesita tu equipo</b></label><br>
-                <textarea formControlName="descripcion" style="width: 250px; height: 80px;" placeholder="La computadora prende pero se queda en la pantalla de carga y está muy lento para abrir programas."></textarea><br>
+                <textarea formControlName="descripcion" placeholder="La computadora prende pero se queda en la pantalla de carga."></textarea><br>
 
                 @if (Cotizar.get('descripcion')?.invalid && Cotizar.get('descripcion')?.touched) {
                     <small style="color: red;">Debe colocar una descripción para poder continuar</small>

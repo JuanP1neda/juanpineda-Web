@@ -6,8 +6,8 @@ nav{
 /* Inicio Menu */
     .section_menu{
         display: flex;
-        margin-bottom: 70px;
-        margin-top: 70px;
+        margin-bottom: 50px;
+        margin-top: 50px;
     }
     .article_menu{
         display: flex;
@@ -23,28 +23,10 @@ nav{
     
 /* Fin menu */
 
-/* Inicio Como Trabajamos */
-    
-    .como_trabajamos{
-        margin-bottom: 70px;
-    }
-    .article_comoTrabajamos{
-        display: flex;
-    }
-    .parrafos_comoTrabajamos{
-        background-color: var(--fondoContenedor);
-        border: solid var(--bordes) 2px;
-        border-radius: 25px;
-        margin: 20px;
-        padding: 20px;
-        width: 50%;
-    }
-
-/* Fin Como Trabajamos */
-
 /* Inicio mi información */
     .mi_informacion{
         display: flex;
+        flex-direction: column;
         margin-bottom: 70px;
     }
     .contenedor_foto{
@@ -57,13 +39,6 @@ nav{
         border: var(--bordes) 2px solid;
     }
 /* Fin mi información */
-
-/* Inicio demostrar capacidad */
-    .demostracion_capacidad{
-        margin-bottom: 70px;
-    }
-
-/* Fin demostrar capacidad */
 
 /* Inicio footer */
     footer{
@@ -96,37 +71,23 @@ nav{
     /* INICIO TABLET-CELULAR */
         /*Inicio Menu*/
             .section_menu{
+                margin-top: 40px;
                 margin-bottom: 20px;
-                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
             .article_menu{
                 padding: 10px 10px;
                 margin: 20px;
-                width: 100%;
+                width: 50%;
             }
         /*Fin Menu*/
 
-        /* Inicio Como Trabajamos */
-        
-            .como_trabajamos{
-                margin-bottom: 40px;
-            }
-            .article_comoTrabajamos{
-                display: flex;
-                justify-content: center;
-            }
-            .parrafos_comoTrabajamos{
-                background-color: var(--fondoContenedor);
-                border: solid var(--bordes) 2px;
-                border-radius: 25px;
-                padding: 30px;
-                width: 100%;
-            }
-        /* Fin Como Trabajamos*/
-
         /* Inicio mi información*/
             .mi_informacion{
-                margin: 50px 20px;
+                margin-bottom: 50px;
                 display: flex;
                 justify-content: center;
             }
@@ -137,13 +98,12 @@ nav{
                 width: 150px;
             }
         /* Fin mi información*/
-
-        /* Inicio demostrar capacidad*/
-            .demostracion_capacidad{
-                margin: 50px 20px;
-            }
-        /* Fin demostrar capacidad*/
             
     /* FIN TABLET-CELULAR */
 
+}
+@media (width <= 450px){
+    .article_menu{
+        width: 80%;
+    }
 }

@@ -1,7 +1,7 @@
 .modal-dialog {
   border-radius: 50px;
   padding: 15px 30px;
-  width: 500px;
+  width: 450px;
   box-shadow: 0 10px 25px var(--sombra);
   border: solid 3px var(--bordes);
 }
@@ -25,7 +25,6 @@
   backdrop-filter: blur(2px);
 }
 .modal-header{
-  margin: 0;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -40,9 +39,26 @@
 div{
   text-align: center;
 }
-
+input{
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+select{
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+textarea{
+  font-family: 14px;
+  width: 290px; height: 50px;
+  margin: 10px 0 5px 0;
+}
 
 @media(width <= 750px){
+  .modal-dialog{
+    width: 70%;
+  }
+}
+@media(width <= 450px){
   .modal-dialog{
     width: 80%;
   }

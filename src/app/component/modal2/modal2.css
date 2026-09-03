@@ -4,7 +4,7 @@
   box-shadow: 0 10px 25px var(--sombra);
   border: solid 3px var(--bordes);
   text-align: center;
-  max-width: 500px;
+  width: 450px;
 }
 .modal-dialog::-webkit-scrollbar{
   width: 10px;
@@ -36,7 +36,29 @@
 .modal-main {
   font-size: 15px;
 }
+div{
+  text-align: center;
+}
+input{
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+select{
+  font-size: 14px;
+  width: 150px;
+  margin: 10px 0 5px 0;
+}
+textarea{
+  font-family: 14px;
+  width: 290px; height: 50px;
+  margin: 10px 0 5px 0;
+}
 
+@media(width <= 750px){
+  .modal-dialog{
+    width: 70%;
+  }
+}
 @media(width <= 450px){
   .modal-dialog{
     width: 80%;
