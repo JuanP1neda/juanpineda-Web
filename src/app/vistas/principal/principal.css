@@ -20,7 +20,12 @@ nav{
         flex-direction: column;
         width: 50%;
     }
-    
+    button{
+        border-color: var(--WhatsApp);
+    }
+    button:hover{
+        box-shadow: 0px 0px 20px 2px var(--WhatsApp);
+}
 /* Fin menu */
 
 /* Inicio mi información */
