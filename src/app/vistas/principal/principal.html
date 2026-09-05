@@ -10,17 +10,20 @@
 
         <article class="article_menu">
             <h4>🌐 Creación de Páginas Web</h4>
-            <p>Creación de páginas web rápidas y adaptadas a celulares, diseñadas para destacar tu negocio en Google, presentar tus servicios con claridad y recibir pedidos directo a tu WhatsApp.</p>
-            <button (click)="abrirModal()" class="boton_menu"><b>Solicitar cotización</b></button>
+            <p>Creación de páginas web rápidas y adaptadas a celulares, diseñadas para destacar tu negocio en Google,
+                presentar tus servicios con claridad y recibir pedidos directo a tu WhatsApp.</p>
+            <button routerLink="/informacion" fragment="paginaWeb" class="boton_menu">Ver detalles y precios</button>
         </article>
 
         <article class="article_menu">
             <h4>💻 Soporte Técnico</h4>
-            <p>Mantenimiento y optimización de computadores para negocios y hogares, diseñados para eliminar la lentitud de tu equipo, proteger tu información y garantizar que tus ventas nunca se detengan.</p>
-            <button (click)="abrirModal2()" class="boton_menu" ><b>Pedir servicio</b></button>
+            <p>Mantenimiento y optimización de computadores para negocios y hogares, diseñados para eliminar la lentitud
+                de tu equipo, proteger tu información y garantizar que tus ventas nunca se detengan.</p>
+            <button routerLink="/informacion" fragment="soporteTecnico" class="boton_menu">Ver detalles y
+                precios</button>
         </article>
 
-        <app-modal
+        <!-- <app-modal
             [isOpen]="mostrarModal()" 
             (onClose)="cerrarModal()">
         </app-modal>
@@ -28,30 +31,35 @@
         <app-modal2
             [isOpen]="mostrarModal2()"
             (onClose)="cerrarModal2()">
-            
-        </app-modal2>
+        </app-modal2> -->
     </section>
 
     <section class="mi_informacion">
-            
-         <article class="contenedor_informacion">
+
+        <article class="contenedor_informacion">
             <h4>¿Quien está detrás de tu proyecto?</h4>
 
             <p>Hola, soy Juan José</p>
-                
-            <p>¡Hola! Soy Juan José , desarrollador de software. Creé este espacio porque sé lo frustrante que es para un negocio intentar vender en internet sin las herramientas correctas.</p>
 
-            <p>No utilice creadores automáticos que hagan que todas las páginas se vean iguales. Creo cada sitio web a la medida para asegurarme de que tu negocio se vea profesional, cargue súper rápido en celulares y convierta visitantes en clientes reales.</p>
+            <p>¡Hola! Soy Juan José , desarrollador de software. Creé este espacio porque sé lo frustrante que es para
+                un negocio intentar vender en internet sin las herramientas correctas.</p>
+
+            <p>No utilice creadores automáticos que hagan que todas las páginas se vean iguales. Creo cada sitio web a
+                la medida para asegurarme de que tu negocio se vea profesional, cargue súper rápido en celulares y
+                convierta visitantes en clientes reales.</p>
         </article>
 
         <article>
             <h4>¿Por qué trabajar conmigo?</h4>
             <ul>
-                <li>Garantía de Satisfacción: Revisas la página de prueba y hacemos los ajustes necesarios hasta que quede exactamente como quieres antes de lanzarla.</li>
+                <li>Garantía de Satisfacción: Revisas la página de prueba y hacemos los ajustes necesarios hasta que
+                    quede exactamente como quieres antes de lanzarla.</li>
                 <br>
-                <li>Atención Directa y Sin Intermediarios: Tratas directamente conmigo desde la primera idea hasta la entrega de tu página.</li>
+                <li>Atención Directa y Sin Intermediarios: Tratas directamente conmigo desde la primera idea hasta la
+                    entrega de tu página.</li>
                 <br>
-                <li>Acompañamiento Completo: Te explico paso a paso cómo funciona todo y cómo sacar el máximo provecho a tu web por WhatsApp o videollamada.</li>
+                <li>Acompañamiento Completo: Te explico paso a paso cómo funciona todo y cómo sacar el máximo provecho a
+                    tu web por WhatsApp o videollamada.</li>
             </ul>
             <p>Más abajo encontrarás los accesos directos a mi WhatsApp y redes profesionales.</p>
         </article>
@@ -68,26 +76,30 @@
     </article>
 
     <article class="footer_redes">
-        <a href="https://wa.me/573233857114" target="_blank"><img class="redes" src="/001-whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://wa.me/573233857114" target="_blank"><img class="redes" src="/001-whatsapp.png"
+                alt="WhatsApp"></a>
 
-        <a href="https://github.com/JuanP1neda" target="_blank"><img class="redes" src="/002-githup.png" alt="GitHub"></a>
+        <a href="https://github.com/JuanP1neda" target="_blank"><img class="redes" src="/002-githup.png"
+                alt="GitHub"></a>
 
-        <a href="https://www.linkedin.com/in/juan-josé-pineda-severiche-83705a22b" target="_blank"><img class="redes" src="/003-linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/juan-josé-pineda-severiche-83705a22b" target="_blank"><img class="redes"
+                src="/003-linkedin.png" alt="LinkedIn"></a>
     </article>
 
     <article class="referencias">
-        <div>Iconos diseñados por 
-            <a href="https://www.flaticon.es/autores/ruslan-babkin" title="Ruslan Babkin"> Ruslan Babkin </a> from 
+        <div>Iconos diseñados por
+            <a href="https://www.flaticon.es/autores/ruslan-babkin" title="Ruslan Babkin"> Ruslan Babkin </a> from
             <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es </a>
         </div>
         <br>
-        <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect
+            - Flaticon</a>
         <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es </a>
         <br>
-        <div>Iconos diseñados por 
-            <a href="https://www.flaticon.es/autores/fathema-khanom" title="Fathema Khanom"> Fathema Khanom </a> from 
+        <div>Iconos diseñados por
+            <a href="https://www.flaticon.es/autores/fathema-khanom" title="Fathema Khanom"> Fathema Khanom </a> from
             <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es </a>
         </div>
     </article>
-   
+
 </footer>
