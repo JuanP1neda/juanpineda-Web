@@ -1,31 +1,141 @@
 <article id="paginaWeb">
     <div>
-        <h3>Información de creación pagina web</h3>
+        <h3>Información de Creación Pagina Web</h3>
         <button class="cerrarBoton" type="button" routerLink="/principal"><b>X</b></button>
     </div>
-        <nav style="width: 100%; border: solid 2px var(--bordes); border-radius: 50px;"></nav>
+    <nav></nav>
     <br>
 
     <section>
-        <h4>Opción 1: Página única de venta</h4>
+        <div class="divBotonSubtitulo">
+            <h4>Opción 1: Página Web para Ventas Rápidas</h4> <button class="botonWeb" (click)="botonMostrarWeb1()">{{
+                mostrarWeb1 ? 'Ocultar Detalles ▲' : 'Ver Detalles ▼' }}</button>
+        </div>
 
-        <p><b>Qué es:</b> Una página única de venta (sin menú superior para ir a otras secciones). Todo está concentrado en un solo lugar: portada, beneficios del producto o servicio, fotos y el botón de compra o contacto.</p>
+        @if (mostrarWeb1) {
+        <p><b>Para quién es:</b> Emprendimientos, negocios locales o profesionales que necesitan presencia rápida en
+            Internet y recibir clientes por WhatsApp.</p>
 
-        <p><b>Para quién sirve:</b> Para lanzar un producto específico, promocionar una oferta puntual o para negocios que solo ofrecen un servicio principal y quieren convertir visitas en clientes de inmediato.</p>
+        <p><b>Lo que incluye tu proyecto:</b></p>
+        <ul>
+            <li>Diseño moderno adaptado a celulares y computadoras.</li>
+            <li>Encabezado impactante con tu logo, fotos y frase de presentación.</li>
+            <li>Sección de beneficios ( ¿Por qué elegir tu negocio? ).</li>
+            <li>Galería de trabajos o productos (hasta 6 fotos).</li>
+            <li>Ubicación exacta en Google Maps.</li>
+            <li>Botón directo a tu WhatsApp para recibir consultas al instante.</li>
+            <li>Registro básico en Google para que te encuentren por tu nombre.</li>
+        </ul>
+        <p><b>Inversión estimada:</b> Desde $150.000 COP</p>
+        <button class="whatsapp" (click)="logica1()">Cotizar en WhatsApp</button>
+        <nav></nav>
+        }
+
     </section>
     <section>
-        <h4>Opción 2: Catálogo de Productos / Servicios</h4>
+        <div class="divBotonSubtitulo">
+            <h4>Opción 2: Web Corporativa / Portafolio Profesional</h4><button class="botonWeb"
+                (click)="botonMostrarWeb2()">{{ mostrarWeb2 ? 'Ocultar Detalles ▲' : 'Ver Detalles ▼' }}</button>
+        </div>
 
-        <p><b>Qué es:</b> Una página enfocada en mostrar una lista organizada de lo que vende el negocio (con fotos, descripciones y precios), dividida por categorías.</p>
 
-        <p><b>Para quién sirve:</b> Para tiendas de ropa, restaurantes, misceláneas o negocios con varios productos donde el cliente explora el menú/catálogo y presiona "Pedir por WhatsApp" en el ítem que le gustó.</p>
+        @if (mostrarWeb2) {
+        <p><b>Para quién es:</b> Ingenieros, técnicos, profesionales independientes, negocios o empresas que quieren
+            proyectar seriedad, mostrar sus trabajos realizados y transmitir confianza a sus clientes.</p>
+
+        <p><b>Lo que incluye tu proyecto:</b></p>
+        <ul>
+            <li>Organización de tu información en hasta 4 pestañas o secciones (ej: Inicio , Sobre Mí / Empresa ,
+                Proyectos , Contacto ).</li>
+            <li>Galería de fotos para exhibir tus mejores trabajos o proyectos terminados.</li>
+            <li>Formulario directo a tu correo electrónico + Botón flotante de WhatsApp.</li>
+            <li>Enlaces a tus redes sociales (Instagram, Facebook, TikTok, LinkedIn).</li>
+            <li><b>Formato fácil de entrega:</b> Te enviamos una plantilla sencilla en Word para que solo llenes los
+                textos de tu negocio y nos adjuntes tus fotos. ¡Nosotros nos encargamos de convertirlo en tu página web!
+            </li>
+        </ul>
+        <p><b>Inversión estimada:</b> Desde $150.000 COP</p>
+        <p><b>Servicio adicional opcional (+ $50.000 COP):</b> Si no sabes qué escribir o no tienes tiempo, redactamos y
+            estructuramos todos los textos comerciales de tu página desde cero.</p>
+            <button class="whatsapp" (click)="logica2()">Cotizar en WhatsApp</button>
+        <nav></nav>
+        }
     </section>
     <section>
-        <h4>Opción 3: Portafolio Profesional</h4>
+        <div class="divBotonSubtitulo">
+            <h4>Opción 3: Catálogo Digital de Productos y Servicios</h4><button class="botonWeb"
+                (click)="botonMostrarWeb3()">{{ mostrarWeb3 ? 'Ocultar Detalles ▲' : 'Ver Detalles ▼' }}</button>
+        </div>
 
-        <p><b>Qué es:</b> Una web personal o corporativa diseñada para presentar la trayectoria, proyectos realizados, estudios y marca personal de un profesional o agencia.</p>
+        @if (mostrarWeb3) {
+        <p><b>Para quién es:</b> Tiendas de ropa, calzado, reposterías, variedades o negocios locales que quieren que
+            sus clientes armen su pedido completo y se lo envíen directo al chat, sin tener que pagarle a un
+            desarrollador cada vez que cambien un precio.</p>
 
-        <p><b>Para quién sirve:</b> Para fotógrafos, diseñadores, ingenieros, firmas de arquitectura o profesionales independientes (¡como tu propia página actual!).</p>
+        <p><b>Lo que incluye tu proyecto:</b></p>
+        <ul>
+            <li>Panel de Control Gratuito en tu Celular: Editas productos, precios y fotos en vivo desde tu aplicación
+                de Google Sheets sin tocar una sola línea de código.</li>
+            <li>Carrito de Pedidos a WhatsApp: El cliente selecciona varios productos y con un solo clic te envía el
+                resumen exacto del pedido armado a tu chat.</li>
+            <li>Organización de tu vitrina digital por categorías fáciles de navegar (ej: Llegadas Nuevas , Ofertas ,
+                Accesorios ).</li>
+            <li>Carga inicial de tus primeros 20 productos con foto, descripción y precio.</li>
+        </ul>
+        <p><b>Inversión estimada:</b> Desde $200.000 COP</p>
+        <button class="whatsapp" (click)="logica3()">Cotizar en WhatsApp</button>
+        <nav></nav>
+        }
+    </section>
+    <section>
+        <div class="divBotonSubtitulo">
+            <h4>Opción 4: Carta / Menú QR para Restaurantes con o sin internet</h4><button class="botonWeb"
+                (click)="botonMostrarWeb4()">{{ mostrarWeb4 ? 'Ocultar Detalles ▲' : 'Ver Detalles ▼' }}</button>
+        </div>
+
+        @if (mostrarWeb4) {
+        <p><b>Para quién es:</b> Comederos, restaurantes, comidas rápidas y cafeterías que quieren ahorrar costos de
+            impresión y mostrar su menú en el celular.</p>
+
+        <p><b>Lo que incluye tu proyecto:</b></p>
+        <ul>
+            <li>Vista 100% optimizada para celulares rápida y fácil de leer.</li>
+            <li>Menú organizado por platos, combos, bebidas y postres con fotos y precios actualizados.</li>
+            <li>Generación de tu Código QR listo para imprimir y colocar en tus mesas o mostrador.</li>
+            <li>Botón para solicitar domicilio directamente a tu WhatsApp.</li>
+        </ul>
+        <p><b>Inversión estimada:</b> Desde $120.000 COP</p>
+        <button class="whatsapp" (click)="logica4()">Cotizar en WhatsApp</button>
+        <nav></nav>
+        }
+
+    </section>
+    <section>
+
+        <div class="divBotonSubtitulo">
+            <h4>Opción 5: Invitación Web Interactiva para Eventos</h4><button class="botonWeb"
+                (click)="botonMostrarWeb5()">{{ mostrarWeb5 ? 'Ocultar Detalles ▲' : 'Ver Detalles ▼' }}</button>
+        </div>
+
+        @if (mostrarWeb5) {
+        <p><b>Para quién es:</b> Cumpleaños infantiles, 15 años, bodas, bautizos y fiestas donde quieras invitar a todos
+            tus familiares y amigos por WhatsApp sin gastar un dineral en tarjetas físicas impresas.</p>
+
+        <p><b>Lo que incluye tu proyecto:</b></p>
+        <ul>
+            <li>Diseño personalizado con la temática de tu fiesta (personajes, colores y fotos del festejado).</li>
+            <li>Datos del evento (fecha, hora y dirección exacta).</li>
+            <li>Cuenta regresiva en vivo mostrando los días y minutos que faltan para la fiesta.</li>
+            <li>Botón interactivo "¿Cómo llegar?" que abre el mapa en GPS (Google Maps / Waze) directo a la recepción.
+            </li>
+            <li>Botón de confirmación para que los invitados te confirmen su asistencia directa a tu WhatsApp con un
+                solo clic.</li>
+        </ul>
+        <p><b>Inversión estimada:</b> Desde $40.000 COP</p>
+        <button class="whatsapp" (click)="logica5()">Cotizar en WhatsApp</button>
+        <nav></nav>
+        }
+
     </section>
 </article>
 
@@ -33,54 +143,54 @@
 
 <article id="soporteTecnico">
     <div>
-        <h3>Información de soporte técnico</h3>
+        <h3>Información de Soporte Técnico</h3>
         <button class="cerrarBoton" type="button" routerLink="/principal"><b>X</b></button>
     </div>
 
-    <nav style="width: 100%; border: solid 2px var(--bordes); border-radius: 50px;"></nav>
+    <nav></nav>
     <br><br>
 
-    <table>
-        <tr>
-            <th>Problema o Servicio Solicitado</th>
-            <th>Detalles Técnicos Comunes</th>
-            <th>Rango Estimado (COP)</th>
-        </tr>
-        <tr>
-            <td>Mantenimiento Lógico y Optimización</td>
-            <td>Eliminación de archivos basura, desactivar programas de inicio, limpieza de registros y aceleración general.</td>
-            <td>$30.000 - $45.000</td>
-        </tr>
-        <tr>
-            <td>Eliminación de virus/malware</td>
-            <td>Limpieza de troyanos, publicidad agresiva, bloqueo de ventanas emergentes y configuración de antivirus ligero.</td>
-            <td>$40.000 - $55.000</td>
-        </tr>
-        <tr>
-            <td>Formateo e instalación limpia (Windows 10/11)</td>
-            <td>Formateo completo, instalación del OS, controladores (drivers) actualizados, suite de oficina (Office) y utilitarios.</td>
-            <td>$50.000 - $70.000</td>
-        </tr>
-        <tr>
-            <td>Instalación / Migración a Linux</td>
-            <td>Para equipos antiguos o clientes que prefieren software libre. Incluye instalación de distribución ligera, controladores y alternativas a Office.</td>
-            <td>$50.000 - $70.000</td>
-        </tr>
-        <tr>
-            <td>Recuperación de Sistema / Error de Arranque</td>
-            <td>Reparación del BCD/GRUB, corrección de pantallazos azules/negros y restauración a punto anterior sin formatear.</td>
-            <td>$45.000 - $65.000</td>
-        </tr>
-        <tr>
-            <td>Instalación de Programas Especializados</td>
-            <td>Software de diseño, herramientas de arquitectura, utilitarios comerciales o programas específicos a petición.</td>
-            <td>$30.000 - $50.000</td>
-        </tr>
-        <tr>
-            <td>Respaldo y Migración de Datos (Copia de Seguridad)</td>
-            <td>Copia de seguridad de información pesada (documentos, fotos, bases de datos) previa al formato o mantenimiento.</td>
-            <td>$25.000 - $40.000</td>
-        </tr>
-    </table>
+    <section>
+        <h4>Opción 1: Mantenimiento Lógico y Optimización</h4>
+        <p><b>Detalles técnicos comunes:</b> Eliminación de archivos basura, desactivar programas de inicio, limpieza de
+            registros y aceleración general.</p>
+        <p><b>Precios:</b> $30.000 - $45.000</p>
+    </section>
+    <section>
+        <h4><b>Opción 2:</b> Eliminación de virus/malware</h4>
+        <p><b>Detalles técnico comunes:</b> Limpieza de troyanos, publicidad agresiva, bloqueo de ventanas emergentes y
+            configuración de antivirus ligero.</p>
+        <p><b>Precios:</b> $40.000 - $55.000</p>
+    </section>
+    <section>
+        <h4>Opción 3: Formateo e instalación limpia (Windows 10/11)</h4>
+        <p><b>Detalles técnicos comunes</b> Formateo completo, instalación del OS, controladores (drivers) actualizados,
+            suite de oficina (Office) y utilitarios.</p>
+        <p><b>Precios:</b> $50.000 - $70.000</p>
+    </section>
+    <section>
+        <h4>Opción 4: Instalación / Migración a Linux</h4>
+        <p><b>Detalles técnicos comunes</b> Para equipos antiguos o clientes que prefieren software libre. Incluye
+            instalación de distribución ligera, controladores y alternativas a Office.</p>
+        <p><b>Precios:</b> $50.000 - $70.000</p>
+    </section>
+    <section>
+        <h4>Opción 5: Recuperación de Sistema / Error de Arranque</h4>
+        <p><b>Detalles técnicos comunes</b> Reparación del BCD/GRUB, corrección de pantallazos azules/negros y
+            restauración a punto anterior sin formatear.</p>
+        <p><b>Precios:</b> $45.000 - $65.000</p>
+    </section>
+    <section>
+        <h4>Opción 6: Instalación de Programas Especializados</h4>
+        <p><b>Detalles técnicos comunes</b> Software de diseño, herramientas de arquitectura, utilitarios comerciales o
+            programas específicos a petición.</p>
+        <p><b>Precios:</b> $30.000 - $50.000</p>
+    </section>
+    <section>
+        <h4>Opción 7: Respaldo y Migración de Datos (Copia de Seguridad)</h4>
+        <p><b>Detalles técnicos comunes</b> Copia de seguridad de información pesada (documentos, fotos, bases de datos)
+            previa al formato o mantenimiento.</p>
+        <p><b>Precios:</b> $25.000 - $40.000</p>
+    </section>
 
 </article>

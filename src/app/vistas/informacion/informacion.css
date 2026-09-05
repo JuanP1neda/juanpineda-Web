@@ -2,23 +2,37 @@ div{
     display: flex;
     justify-content: space-between;
 }
+nav{
+    width: 100%; 
+    border: solid 2px var(--bordes); 
+    border-radius: 50px;
+}
 h3{
     color: var(--titulo);
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--sombra);
+.divBotonSubtitulo{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
 }
-th, td{
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid var(--sombra);
+h4{
+    margin: 5px 0px;
 }
-th{
-    background-color: var(--bordes);
-    color: white;
+.botonWeb{
+    padding: 5px 10px;
 }
-tr:hover{
-    background-color: #f5f5f5;
+.whatsapp{
+    border-color: var(--WhatsApp);
+}
+.whatsapp:hover{
+        box-shadow: 0px 0px 20px 2px var(--WhatsApp);
+}
+
+@media (width <= 750px){
+    h4{
+        width: 70%;
+    }
+    .botonWeb{
+        width: 30%;
+    }
 }

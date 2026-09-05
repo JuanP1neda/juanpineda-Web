@@ -39,6 +39,9 @@ p,ul,ol{
     color: var(--texto);
     font-size: 15px;
 }
+li{
+    margin: 5px 0px;
+}
 a{
     text-decoration: none;
     color: var(--enlaces);
@@ -96,7 +99,10 @@ button:hover{
             font-size: 15px;
         }
         button{
-            font-size: 16px;
+            font-size: 14px;
+        }
+        button:hover{
+            box-shadow: none;
         }
     }
 
