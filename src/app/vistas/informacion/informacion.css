@@ -21,6 +21,12 @@ h4{
 .botonWeb{
     padding: 5px 10px;
 }
+.whatsapp{
+    border-color: var(--WhatsApp);
+}
+.whatsapp:hover{
+        box-shadow: 0px 0px 20px 2px var(--WhatsApp);
+}
 
 @media (width <= 750px){
     h4{
